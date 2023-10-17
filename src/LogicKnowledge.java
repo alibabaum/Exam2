@@ -25,8 +25,11 @@ public class LogicKnowledge {
             i++;
         }
         greenTicket(a, b, c);
-        //I was confused that they both need to be in the same class, so hopefully this satisfies that requiremnt....
+        //I was confused that they both need to be in the same class,
+        // so hopefully this satisfies that requirement....
+        System.out.println("");
         System.out.println(">>>>>>>>>> Question 2 part 2 below:");
+        System.out.println("");
 
         System.out.println("How many small bars do you have?");
         int small = inScanner.nextInt();
@@ -60,6 +63,10 @@ public class LogicKnowledge {
 
         if (needed < 0) {
             return -1;
+        }
+        if (totalLarge > goal){
+
+            return needed % 5;
         }
         if (needed < small) {
             return goal - totalLarge;
