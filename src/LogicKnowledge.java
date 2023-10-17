@@ -64,7 +64,7 @@ public class LogicKnowledge {
         if (needed < 0) {
             return -1;
         }
-        if (totalLarge > goal){
+        if (totalLarge > goal) {
 
             return needed % 5;
         }
