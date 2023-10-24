@@ -22,6 +22,7 @@ public class ArrayKnowledge {
 
     }
 
+    // -5 for no correct return
     public static void stringToArray(String str) {
         char[] chars = str.toCharArray();
 
@@ -37,6 +38,7 @@ public class ArrayKnowledge {
         System.out.println("]");
     }
 
+    // -5 for no correct return
     public static void generateArrayWithBounds(int start, int end, int step) {
         int[] numbers = new int[100];
         int i = 0;
