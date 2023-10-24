@@ -2,29 +2,7 @@ import java.util.Scanner;
 
 public class LogicKnowledge {
     public static void main(String[] args) {
-        int i = 0;
-        int a = 0;
-        int b = 0;
-        int c = 0;
-
         Scanner inScanner = new Scanner(System.in);
-        while (i < 3) {
-
-            System.out.println("Please enter a, b, or c:");
-            String ticket = inScanner.next();
-
-            if (ticket.equals("a")) {
-                a = a + 1;
-            }
-            if (ticket.equals("b")) {
-                b = b + 1;
-            }
-            if (ticket.equals("c")) {
-                c = c + 1;
-            }
-            i++;
-        }
-        greenTicket(a, b, c);
         //I was confused that they both need to be in the same class,
         // so hopefully this satisfies that requirement....
         System.out.println("");
@@ -42,7 +20,10 @@ public class LogicKnowledge {
 
     }
 
+    // -5, no correct return
     public static void greenTicket(int a, int b, int c) {
+        // None of the conditions are correct. They should be checking if two to three of the numbers are the same, not
+        // not that they equal 1, 2, or 3. -15
         if (a == 1 && b == 1) {
             System.out.println("You get a 0.");
         }
@@ -65,7 +46,7 @@ public class LogicKnowledge {
             return -1;
         }
         if (totalLarge > goal) {
-
+            // That's really smart. I didn't think of that
             return needed % 5;
         }
         if (needed < small) {
@@ -73,6 +54,7 @@ public class LogicKnowledge {
         }
         if (needed > small) {
             //I was unclear in the instructions if I needed to make sure I had enough small bars even if the overall total of chocolate was greater than the goal number, so I put this in just in case.
+            // You got that very correct. Good assertion
             return -1;
         }
         if (total > goal) {

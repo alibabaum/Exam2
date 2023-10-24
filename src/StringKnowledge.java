@@ -11,12 +11,18 @@ public class StringKnowledge {
 
     }
 
+    // -5, doesn't return anything
     public static void endOf(String stringA, String stringB) {
         String lowerStringA = stringA.toLowerCase();
         String lowerStringB = stringB.toLowerCase();
         int lengthA = stringA.length();
         int lengthB = stringB.length();
 
+        // I understand why you did this with the last three,
+        // but the question was if one string ended with the other no matter lenght.
+        // So I would have expected endOf("Hamburger", "Burger") to return true, but
+        // endOf("Craven", "Coven") to return false, but with how you've implemented it here, the latter
+        // would print false. (-4)
         String lastThreeA = lowerStringA.substring(lengthA - 3);
         String lastThreeB = lowerStringB.substring(lengthB - 3);
 
